@@ -1,3 +1,5 @@
 # Klesis
 
 An application to help aspiring Software Engineers on their job searching journey. Built using React, TypeScript, Tailwind, FastAPI, and Supabase.
+
+**NOTE**: As of _**9/8/26**_ this project is currently in development! 
