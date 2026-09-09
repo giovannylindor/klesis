@@ -37,6 +37,8 @@ pyttest==0.1
 realtime==2.31.0
 requests==2.34.2
 rich==15.0.0
+SQLAlchemy==2.0.52
+sqlmodel==0.0.42
 starlette==1.6.0
 storage3==2.31.0
 StrEnum==0.4.15
