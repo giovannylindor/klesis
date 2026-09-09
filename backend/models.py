@@ -1,7 +1,7 @@
 from sqlmodel import SQLModel, Field
 from datetime import datetime
 
-class User(SQLModel):
+class User(SQLModel, table=True):
     id: str | None = Field(default=None, primary_key=True)
     email: str | None = Field(default=None, nullable=False)
     name: str | None = Field(default=None, nullable=False)
@@ -9,7 +9,7 @@ class User(SQLModel):
     account_created: datetime | None = Field(default=None, nullable=True)
 
 
-class Application(SQLModel):
+class Application(SQLModel, table=True):
     id: int | None = Field(primary_key=True, default=None)
     user_id: str | None = Field(default=None, foreign_key='user.id')
     company: str | None = Field(default=None, nullable=False)
@@ -21,7 +21,7 @@ class Application(SQLModel):
     application_updated: datetime | None = Field(default=None, nullable=False)
 
 
-class Interview(SQLModel):
+class Interview(SQLModel, table=True):
     id: int | None = Field(primary_key=True, default=None)
     interview_date: datetime | None = Field(default=None, nullable=False)
     notes: str | None = Field(default=None, nullable=True)
